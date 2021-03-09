@@ -7,6 +7,7 @@ const server  = http.createServer((req, res) => {
     const { url } = req;
 
     if (url === '/translations') {
+        const translations = {1: 'one', 2: 'two', 3: 'three'}
         res.end('translations');
     }
     res.end('Welcome to Node!');
