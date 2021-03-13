@@ -16,5 +16,17 @@
         "message": "One person will give you great advice.",
         "lucky_number": 30,
         "spirit_animal": "bear"
+    },
+    {
+        "id": 4,
+        "message": "Abundant pleasures are coming your way.",
+        "lucky_number": 69,
+        "spirit_animal": "dolphin"
+    },
+    {
+        "id": 5,
+        "message": "Wealth and riches are all around you.",
+        "lucky_number": 3,
+        "spirit_animal": "horse"
     }
 ]
