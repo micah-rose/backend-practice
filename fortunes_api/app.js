@@ -8,9 +8,7 @@ app.get('/fortunes', (req, res) => {
 });
 
 app.get('/fortunes/random', (req, res) => {
-    const random_index = Math.floor(Math.random() * fortunes.length);
-    const r_fortune = fortunes[random_index];
-    res.json(r_fortune);
+    res.json(fortunes[Math.floor(Math.random() * fortunes.length)]);
 })
 
 module.exports = app;
