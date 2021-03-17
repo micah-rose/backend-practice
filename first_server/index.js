@@ -1,5 +1,4 @@
 const http = require('http');
-
 const hostName = 'localhost';
 const port = 3000;
 

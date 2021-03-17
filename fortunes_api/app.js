@@ -1,6 +1,5 @@
 const express = require('express');
 const fortunes = require('./data/fortunes.json');
-
 const app = express();
 
 app.get('/fortunes', (req, res) => {
