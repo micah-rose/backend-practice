@@ -1,9 +1,9 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const fortunes = require('./data/fortunes.json');
 
 const app = express();
-app.use(bodyParser.json());
+
+app.use(express.json());
 
 app.get('/fortunes', (req, res) => {
     res.json(fortunes);
