@@ -18,8 +18,6 @@ app.get('/fortunes/:id', (req, res) => {
 })
 
 app.post('/fortunes', (req, res) => {
-    console.log(req.body);
-
     const {message, lucky_number, spirit_animal} = req.body;
     const fortune_ids = fortunes.map(f => f.id);
 
