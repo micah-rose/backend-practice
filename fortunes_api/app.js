@@ -31,7 +31,9 @@ app.post('/fortunes', (req, res) => {
 
     const new_fortunes = fortunes.concat(fortune);
 
-    fs.writeFile('./data/fortunes.json', JSON.stringify(new_fortunes), err => console.log(err));
+    fs.writeFile(
+        './data/fortunes.json', 
+        JSON.stringify(new_fortunes), err => console.log(err));
     res.json(new_fortunes);
 })
 
