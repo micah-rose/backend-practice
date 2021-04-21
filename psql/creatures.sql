@@ -18,6 +18,11 @@ CREATE TABLE allies(
     elf character varying(50)
 );
 
+CREATE TABLE guardians(
+    elf character varying(50),
+    hobbit character varying(50)
+);
+
 INSERT INTO wizards(name, power) 
 VALUES ('Gandalf', 'fireworks'),
 ('Sauron', 'rings'),
@@ -38,6 +43,11 @@ VALUES ('Gandalf', 'Legolas'),
 ('Gandalf', 'Arwen'),
 ('Saruman', 'Elrond'),
 ('Saruman', 'Legolas');
+
+INSERT INTO guardians(elf, hobbit)
+VALUES ('Legolas', 'Frodo'),
+('Arwen', 'Sam'),
+('Elrond', 'Bilbo');
 
 --Command for terminal when I can get it to work:
 --psql -U postgres creaturesdb < creatures.sql
