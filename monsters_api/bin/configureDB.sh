@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PGPASSWORD="password"
+
 database="monstersdb"
 
 echo "Configuring database: $database"
