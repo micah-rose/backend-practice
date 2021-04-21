@@ -41,9 +41,9 @@ app.put('/fortunes/:id', (req, res) => {
 
     const old_fortune = fortunes.find(f => f.id == id);
 
-    old_fortune.message = message;
-    old_fortune.lucky_number = lucky_number;
-    old_fortune.spirit_animal = spirit_animal;
+    if (message) old_fortune.message = message;
+    if (lucky_number) old_fortune.lucky_number = lucky_number;
+    if (spirit_animal) old_fortune.spirit_animal = spirit_animal;
 
     fs.writeFile(
         './data/fortunes.json', 
