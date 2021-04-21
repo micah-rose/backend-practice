@@ -27,3 +27,6 @@ INSERT INTO hobbits(name, personality)
 VALUES ('Frodo', 'careful'),
 ('Sam', 'brave'),
 ('Bilbo', 'greedy');
+
+--Command for terminal when I can get it to work:
+--psql -U postgres creaturesdb < creatures.sql
