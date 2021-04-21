@@ -18,6 +18,12 @@ app.get('/fortunes/:id', (req, res) => {
     res.json(fortunes.find(f => f.id == req.params.id));
 })
 
+const writeFortunes = json => {
+    fs.writeFile(
+        './data/fortunes.json', 
+        JSON.stringify(json), err => console.log(err));
+}
+
 app.post('/fortunes', (req, res) => {
     const {message, lucky_number, spirit_animal} = req.body;
     const fortune_ids = fortunes.map(f => f.id);
@@ -29,9 +35,7 @@ app.post('/fortunes', (req, res) => {
         spirit_animal
     });
 
-    fs.writeFile(
-        './data/fortunes.json', 
-        JSON.stringify(new_fortunes), err => console.log(err));
+    writeFortunes(new_fortunes);
     res.json(new_fortunes);
 })
 
@@ -45,11 +49,8 @@ app.put('/fortunes/:id', (req, res) => {
     if (lucky_number) old_fortune.lucky_number = lucky_number;
     if (spirit_animal) old_fortune.spirit_animal = spirit_animal;
 
-    fs.writeFile(
-        './data/fortunes.json', 
-        JSON.stringify(fortunes), err => console.log(err));
-
-        res.json(fortunes);
+    writeFortunes(fortunes);
+    res.json(fortunes);
 })
 
 module.exports = app;
