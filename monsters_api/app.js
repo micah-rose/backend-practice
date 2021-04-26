@@ -3,6 +3,7 @@ const monsters = require('./routes/monsters')
 
 const app = express();
 
+app.use(express.json());
 app.use('/monsters', monsters);
 
 app.use((err, req, res, next) => {
